@@ -43,6 +43,21 @@
                                 @t.getPrice
 
                                 </p>
+                                    <!-- Edit Ticket -->
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+
+                                    @if(user.getRole.equals("admin")) {
+                                        <a href="@routes.HomeController.updateTicket(t.getTicketID)" class = "btn-xs btn-danger">
+
+                                            <span class="glyphicon glyphicon-pencil"></span></a>
+                                    }
+
+                                    </div>
+
+
+                                </div>
+                                <!-- Delete Ticket -->
                                 <div class="row">
                                     <div class="col-xs-12 col-md-6">
 
@@ -56,6 +71,7 @@
 
 
                                 </div>
+                            <!-- Delete Ticket -->
                             </div>
                         </div>
                     </div>

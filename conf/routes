@@ -18,6 +18,7 @@ GET     /signUpSubmit               controllers.HomeController.signUpSubmit()
 GET     /addticket                  controllers.HomeController.addTicket
 GET     /logout                     controllers.LoginController.logout
 
+GET     /updateTicket/:id           controllers.HomeController.updateTicket(id:Long)
 
 POST    /addTicketSubmit             controllers.HomeController.addTicketSubmit
 

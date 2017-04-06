@@ -899,3 +899,10 @@ insert into user (email, role, name, password) values (matthew@tc.ie, admin, Mat
 2017-04-04 11:05:35 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO USER (EMAIL, ROLE, NAME, PASSWORD) VALUES (MATTHEW@[*]TC.IE, ADMIN, MATTHEW, MATTHEW) "; expected "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
 insert into user (email, role, name, password) values (matthew@tc.ie, admin, Matthew, matthew) [42001-192]
+2017-04-06 12:11:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM USER 
+INSERT INTO[*] NAME VALUES ('jamie')
+INSERT INTO PASSWORD VALUES ('j') "; SQL statement:
+SELECT * FROM USER 
+insert into name values ('jamie')
+insert into password values ('j') [42000-192]

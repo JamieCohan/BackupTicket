@@ -14,6 +14,9 @@
                 @inputText(addTicketForm("quantity"), '_label -> "Quantity", 'class -> "form-control")
                 @inputText(addTicketForm("price"), '_label -> "Price", 'class -> "form-control")
 
+                <!-- Hidden -->
+                  @inputText(addTicketForm("ticketID"), '_label -> "", 'hidden -> "hidden")
+
                 <div class="actions">
                     <input type="submit" value="add ticket" class="btn btn-primary">
                     

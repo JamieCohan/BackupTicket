@@ -137,7 +137,12 @@ public class HomeController extends Controller {
 
         Ticket newTicket = newTicketForm.get();
 
-        newTicket.save();
+        if(newTicket.getTicketID() == null) {
+            newTicket.save();
+        }
+        else if (newTicket.getTicketID() !=null){
+            newTicket.update();
+        }
 
         flash("success", "Ticket " + newTicket.getTicketType() + "has been created");
 
@@ -148,7 +153,7 @@ public class HomeController extends Controller {
     @Transactional
     public Result deleteTicket(Long id){
 
-        Event.find.ref(id).delete();
+        Ticket.find.ref(id).delete();
 
         flash("success","Ticket has been deleted");
 
@@ -158,4 +163,24 @@ public class HomeController extends Controller {
     private User getUserFromSession(){
         return User.getUserById(session().get("email"));
     }
+
+
+
+    @Transactional
+    public Result updateTicket(Long id){
+
+    Ticket t;
+    Form<Ticket> ticketForm;
+
+    try {
+        t = Ticket.find.byId(id);
+
+        ticketForm = formFactory.form(Ticket.class).fill(t);
+
+    } catch (Exception ex) {
+        return badRequest("error");
+    }
+
+    return ok(addTicket.render(ticketForm, getUserFromSession()));
+}
 }

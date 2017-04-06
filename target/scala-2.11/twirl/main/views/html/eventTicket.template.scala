@@ -73,32 +73,48 @@ Seq[Any](format.raw/*1.56*/("""
                                 """),_display_(/*43.34*/t/*43.35*/.getPrice),format.raw/*43.44*/("""
 
                                 """),format.raw/*45.33*/("""</p>
+                                    <!-- Edit Ticket -->
                                 <div class="row">
                                     <div class="col-xs-12 col-md-6">
 
-                                    """),_display_(/*49.38*/if(user.getRole.equals("admin"))/*49.70*/ {_display_(Seq[Any](format.raw/*49.72*/("""
-                                        """),format.raw/*50.41*/("""<a href=""""),_display_(/*50.51*/routes/*50.57*/.HomeController.deleteTicket(t.getTicketID)),format.raw/*50.100*/("""" class = "btn-xs btn-danger"
-                                        onclick="return confirmDel();">
-                                            <span class="glyphicon glyphicon-trash"></span></a>
-                                    """)))}),format.raw/*53.38*/("""
+                                    """),_display_(/*50.38*/if(user.getRole.equals("admin"))/*50.70*/ {_display_(Seq[Any](format.raw/*50.72*/("""
+                                        """),format.raw/*51.41*/("""<a href=""""),_display_(/*51.51*/routes/*51.57*/.HomeController.updateTicket(t.getTicketID)),format.raw/*51.100*/("""" class = "btn-xs btn-danger">
 
-                                    """),format.raw/*55.37*/("""</div>
+                                            <span class="glyphicon glyphicon-pencil"></span></a>
+                                    """)))}),format.raw/*54.38*/("""
+
+                                    """),format.raw/*56.37*/("""</div>
 
 
                                 </div>
+                                <!-- Delete Ticket -->
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6">
+
+                                    """),_display_(/*64.38*/if(user.getRole.equals("admin"))/*64.70*/ {_display_(Seq[Any](format.raw/*64.72*/("""
+                                        """),format.raw/*65.41*/("""<a href=""""),_display_(/*65.51*/routes/*65.57*/.HomeController.deleteTicket(t.getTicketID)),format.raw/*65.100*/("""" class = "btn-xs btn-danger"
+                                        onclick="return confirmDel();">
+                                            <span class="glyphicon glyphicon-trash"></span></a>
+                                    """)))}),format.raw/*68.38*/("""
+
+                                    """),format.raw/*70.37*/("""</div>
+
+
+                                </div>
+                            <!-- Delete Ticket -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            """)))}),format.raw/*64.14*/("""
+            """)))}),format.raw/*80.14*/("""
 
 
-            """),format.raw/*67.13*/("""<script>
-                    function confirmDel()"""),format.raw/*68.42*/("""{"""),format.raw/*68.43*/("""
-                        """),format.raw/*69.25*/("""return confirm('Are you sure?');
-                    """),format.raw/*70.21*/("""}"""),format.raw/*70.22*/("""
-            """),format.raw/*71.13*/("""</script>
+            """),format.raw/*83.13*/("""<script>
+                    function confirmDel()"""),format.raw/*84.42*/("""{"""),format.raw/*84.43*/("""
+                        """),format.raw/*85.25*/("""return confirm('Are you sure?');
+                    """),format.raw/*86.21*/("""}"""),format.raw/*86.22*/("""
+            """),format.raw/*87.13*/("""</script>
 
                 <!--END CONTENT-->
 """)))}))
@@ -121,11 +137,11 @@ Seq[Any](format.raw/*1.56*/("""
 object eventTicket extends eventTicket_Scope0.eventTicket
               /*
                   -- GENERATED --
-                  DATE: Tue Apr 04 11:56:54 IST 2017
-                  SOURCE: /home/wdd/webapps/TicketStore/app/views/eventTicket.scala.html
-                  HASH: bf3d415ebfad8251bc0327fc07b2915d7c1cbdee
-                  MATRIX: 788->1|952->55|980->74|1008->77|1036->97|1075->99|1106->104|1854->825|1895->857|1935->859|1988->884|2025->894|2040->900|2088->927|2194->1002|2243->1023|2444->1197|2477->1214|2517->1216|2566->1237|2713->1357|2723->1358|2758->1372|2951->1538|2961->1539|2991->1548|3053->1582|3242->1744|3283->1776|3323->1778|3392->1819|3429->1829|3444->1835|3509->1878|3775->2113|3841->2151|4068->2347|4111->2362|4189->2412|4218->2413|4271->2438|4352->2491|4381->2492|4422->2505
-                  LINES: 27->1|32->1|34->4|36->6|36->6|36->6|37->7|56->26|56->26|56->26|57->27|57->27|57->27|57->27|58->28|59->29|66->36|66->36|66->36|67->37|70->40|70->40|70->40|73->43|73->43|73->43|75->45|79->49|79->49|79->49|80->50|80->50|80->50|80->50|83->53|85->55|94->64|97->67|98->68|98->68|99->69|100->70|100->70|101->71
+                  DATE: Thu Apr 06 13:27:47 BST 2017
+                  SOURCE: C:/Users/Jay/Desktop/TicketStore/app/views/eventTicket.scala.html
+                  HASH: 4e1266b836e90b4205620b12632526eea8e364b6
+                  MATRIX: 788->1|952->55|982->77|1012->82|1040->102|1079->104|1111->110|1878->850|1919->882|1959->884|2013->910|2050->920|2065->926|2113->953|2220->1029|2270->1051|2478->1232|2511->1249|2551->1251|2601->1273|2751->1396|2761->1397|2796->1411|2992->1580|3002->1581|3032->1590|3096->1626|3347->1850|3388->1882|3428->1884|3498->1926|3535->1936|3550->1942|3615->1985|3815->2154|3883->2194|4178->2462|4219->2494|4259->2496|4329->2538|4366->2548|4381->2554|4446->2597|4715->2835|4783->2875|5071->3132|5117->3150|5196->3201|5225->3202|5279->3228|5361->3282|5390->3283|5432->3297
+                  LINES: 27->1|32->1|34->4|36->6|36->6|36->6|37->7|56->26|56->26|56->26|57->27|57->27|57->27|57->27|58->28|59->29|66->36|66->36|66->36|67->37|70->40|70->40|70->40|73->43|73->43|73->43|75->45|80->50|80->50|80->50|81->51|81->51|81->51|81->51|84->54|86->56|94->64|94->64|94->64|95->65|95->65|95->65|95->65|98->68|100->70|110->80|113->83|114->84|114->84|115->85|116->86|116->86|117->87
                   -- GENERATED --
               */
           
